@@ -14,7 +14,4 @@ RUN confluent-hub install --no-prompt confluentinc/kafka-connect-ibmmq:${CONFLUE
     confluent-hub install --no-prompt confluentinc/kafka-connect-ibmmq-sink:${CONFLUENT_MQ_SINK_VERSION} && \
     cp /usr/share/java/kafka/com.ibm.mq.allclient-${MQ_ALLCLIENT_VERSION}.jar /usr/share/confluent-hub-components/confluentinc-kafka-connect-ibmmq/lib && \
     cp /usr/share/java/kafka/com.ibm.mq.allclient-${MQ_ALLCLIENT_VERSION}.jar /usr/share/confluent-hub-components/confluentinc-kafka-connect-ibmmq-sink/lib && \
-    chmod -R 755 /usr/share/confluent-hub-components && \
-    chown -R 1001:0 /usr/share/confluent-hub-components
-
-USER 1001
+    chmod -R 755 /usr/share/confluent-hub-components
