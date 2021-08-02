@@ -6,8 +6,6 @@ ARG CONFLUENT_MQ_SOURCE_VERSION=11.0.2
 ARG CONFLUENT_MQ_SINK_VERSION=1.3.2
 ARG MQ_ALLCLIENT_VERSION=9.2.2.0
 
-USER root
-
 ADD https://repo1.maven.org/maven2/com/ibm/mq/com.ibm.mq.allclient/${MQ_ALLCLIENT_VERSION}/com.ibm.mq.allclient-${MQ_ALLCLIENT_VERSION}.jar /usr/share/java/kafka/
 
 RUN confluent-hub install --no-prompt confluentinc/kafka-connect-ibmmq:${CONFLUENT_MQ_SOURCE_VERSION} && \
